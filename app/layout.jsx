@@ -1,14 +1,32 @@
 import './globals.css'
 
 export default function RootLayout({ children }) {
+  const header = (
+    <header>
+      <div>
+        <h1>Erin's Website</h1>
+        <p>Welcome to my portfolio.</p>
+        <br/>
+      </div>
+    </header>
+  );
+
+  const footer = (
+    <footer>
+      <div>
+        <br/>
+        <h3>Developed by Erin Kahn</h3>
+      </div>
+    </footer>
+  )
   return (
     <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.jsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
       <head />
-      <body>{children}</body>
+      <body>
+        {header}
+        {children}
+        {footer}
+      </body>
     </html>
   )
 }
