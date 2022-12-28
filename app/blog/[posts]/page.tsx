@@ -32,7 +32,9 @@ export default function PostPage(props: any) {
                 <p>{post.data.date}</p> 
             </div>
             <br/>
-            <Markdown>{post.content}</Markdown>
+            <article className="prose lg:prose-xl">
+                <Markdown>{post.content}</Markdown>
+            </article>
         </div>
     </>
 }
