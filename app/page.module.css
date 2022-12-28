@@ -7,6 +7,12 @@
   min-height: 100vh;
 }
 
+.nav {
+  padding: 3em;
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .description {
   display: inherit;
   justify-content: inherit;

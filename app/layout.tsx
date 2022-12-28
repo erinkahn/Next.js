@@ -1,12 +1,14 @@
-import './globals.css'
+import Nav from '../components/Nav';
+import '../styles/globals.css';
 
 export default function RootLayout({ children }) {
   const header = (
-    <header>
-      <div>
-        <h1>Erin's Website</h1>
+    <header className="w-100">
+      <div className="text-center">
+        <h1 className="text-2xl font-bold underline">Erin's Website</h1>
         <p>Welcome to my portfolio.</p>
         <br/>
+        <Nav/>
       </div>
     </header>
   );
@@ -23,9 +25,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head />
       <body>
-        {header}
-        {children}
-        {footer}
+        <div className="mx-auto">
+          {header}
+          {children}
+          {footer}
+        </div>
       </body>
     </html>
   )
