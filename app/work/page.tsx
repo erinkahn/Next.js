@@ -1,5 +1,5 @@
 import ProjectPreview from "../../components/ProjectPreview";
-import getProjectsJsonData from "../../getters/getProjectsJsonData";
+import getProjectsJsonData from "../../pages/api/getProjectsJsonData";
 
 export default function WorkPage() {
 	const projectJsonData = getProjectsJsonData();

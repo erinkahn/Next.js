@@ -1,7 +1,7 @@
 import fs from 'fs';
 import Image from 'next/image';
 import Link from 'next/link';
-import getProjectsJsonData from '../../../getters/getProjectsJsonData';
+import getProjectsJsonData from '../../../pages/api/getProjectsJsonData';
 import styles from '../../page.module.css';
 
 const getProjectContent = (slug: string) => {
@@ -36,13 +36,13 @@ export default function Project(props) {
 		<div className={styles.card}>
 			<p>Project: {content.title}</p>
 			<p>Description: {content.description}</p>
-			{/* <Image
-				src={image}
-				alt={imageAlt}
-				width={100}
-				height={24}
+			<Image
+				src={content.image}
+				alt={content.imageAlt}
+				width={500}
+				height={300}
 				priority
-			/> */}
+			/>
 			<Link
 				href={content.url}
 				target="_blank"

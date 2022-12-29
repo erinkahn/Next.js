@@ -1,6 +1,6 @@
 import fs from "fs";
 import matter from 'gray-matter';
-import { PostMetadata } from "../interfaces/PostMetadata";
+import { PostMetadata } from "../../interfaces/PostMetadata";
 
 const getPostsMetadata = (): PostMetadata[] => {
 	const mdDataFiles = fs.readdirSync("data/posts/").filter((file) => file.endsWith(".md"));

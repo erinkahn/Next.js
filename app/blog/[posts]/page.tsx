@@ -2,7 +2,7 @@ import fs from 'fs';
 import Markdown from 'markdown-to-jsx';
 import styles from '../../page.module.css';
 import matter from 'gray-matter';
-import getPostsMetadata from '../../../getters/getPostMetadata';
+import getPostsMetadata from '../../../pages/api/getPostMetadata';
 
 const getPostContent = (slug: string) => {
     const postData = fs.readFileSync(`data/posts/${slug}.md`, "utf8");

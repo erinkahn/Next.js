@@ -1,7 +1,13 @@
 import Nav from '../components/Nav';
 import '../styles/globals.css';
 
-export default function RootLayout({ children }) {
+// the root layout MUST contain the html and body tags
+// shared layout across all pages
+// this file must be included in the app directory
+// canNOT be set to a client component
+export default function RootLayout({ children }: {
+  children: React.ReactNode;
+}) {
   const header = (
     <header className="w-100">
       <div className="text-center">

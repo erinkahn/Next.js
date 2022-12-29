@@ -4,7 +4,7 @@
       "slug": "project1",  
       "title": "project 1",
       "description": "1 lorem ipsum",
-      "image": "",
+      "image": "/images/phpMyAdminDbtable.png",
       "alt": "",
       "url": ""
     },
@@ -12,7 +12,7 @@
       "slug": "project2",
       "title": "project 2",
       "description": "2 lorem ipsum",
-      "image": "",
+      "image": "/images/updatingTableData.png",
       "alt": "",
       "url": ""
     },
@@ -20,7 +20,7 @@
       "slug": "project3",
       "title": "project 3",
       "description": "3 lorem ipsum",
-      "image": "",
+      "image": "/images/mysqlTutorial.png",
       "alt": "",
       "url": ""
     }
