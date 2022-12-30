@@ -8,9 +8,11 @@ export default function WorkPage() {
 	})
 
   	return <>		
-		<div>
-			<h1>Work Page</h1>
-			{projectPreviews}
+		<div className="text-center">
+			<h1 className="mb-7">Work Page (static json data)</h1>
+			<ul className="grid grid-cols-3 gap-4">
+				{projectPreviews}
+			</ul>
 		</div>
   	</>
 }

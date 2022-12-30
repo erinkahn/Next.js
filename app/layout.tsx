@@ -9,21 +9,21 @@ export default function RootLayout({ children }: {
   children: React.ReactNode;
 }) {
   const header = (
-    <header className="w-100">
-      <div className="text-center">
-        <h1 className="text-2xl font-bold underline">Erin's NextJS 13 App</h1>
-        <p>Welcome to my site of chaos where I train in nextjs and learn things hands on.</p>
-        <br/>
+    <header className="w-100 py-7">
+      <div className="text-center max-w-xl mx-auto">
+        <h1 className="text-2xl font-bold underline pb-3">NextJS 13</h1>
+        <p>Welcome to my app where I experiment in nextjs and learn things hands on. </p>
+        <p>The intent of this app is not based on design or asthetic, but instead, functionality.</p>
         <Nav/>
       </div>
     </header>
   );
 
   const footer = (
-    <footer>
+    <footer className="pt-7">
       <div>
         <br/>
-        <h3>Developed by Erin Kahn</h3>
+        <h3 className="text-center">This is the footer...cute right?</h3>
       </div>
     </footer>
   )
@@ -31,7 +31,7 @@ export default function RootLayout({ children }: {
     <html lang="en">
       <head />
       <body>
-        <div className="mx-auto">
+        <div className="mx-auto px-5 max-w-5xl">
           {header}
           {children}
           {footer}

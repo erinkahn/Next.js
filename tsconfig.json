@@ -28,8 +28,12 @@
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx"
-, "lib/db.js", "pages/api/getRespFromDb.js"  ],
+    "**/*.tsx",
+    "**/**/*.ts",
+    "**/**/*.tsx",
+    "lib/db.js",
+    "pages/api/getRespFromDb.js"
+  ],
   "exclude": [
     "node_modules"
   ]

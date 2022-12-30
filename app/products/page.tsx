@@ -19,7 +19,7 @@ export default function ProductPage() {
     
     return <>
         <div>
-            <h1>Products Page</h1>
+            <h1 className="text-center mb-7">Products Page (mysql db data)</h1>
             <ul className="grid grid-cols-3 gap-4">
                 {dataResponse.map((product, p) => (
                     <li className="text-center" key={`product-${p}`}>
@@ -30,8 +30,8 @@ export default function ProductPage() {
                                 src={`/images/${product.PRODUCT_IMG}`} 
                                 alt={product.PRODUCT_NAME}
                             />
-                            <p><b>{product.PRODUCT_NAME}</b></p>
-                            <p><i>${product.PRODUCT_COST}.00</i></p>
+                            <p>{product.PRODUCT_NAME}</p>
+                            <p><b>${product.PRODUCT_COST}.00</b></p>
                         </Link>
                     </li>
                 ))} 

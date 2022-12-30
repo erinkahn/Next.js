@@ -5,7 +5,7 @@ import getProjectsJsonData from '../../../pages/api/getProjectsJsonData';
 import styles from '../../page.module.css';
 
 const getProjectContent = (slug: string) => {
-	const jsonData = fs.readFileSync("data/projects.json", "utf8");
+	const jsonData = fs.readFileSync("staticData/projects.json", "utf8");
 	const data = JSON.parse(jsonData);
 	const dataArray = Object.keys(data.projects).map(function(_) { return data.projects[_]; });
 	const index = dataArray.map(projects => projects.slug).indexOf(slug);
@@ -32,10 +32,9 @@ export default function Project(props) {
 	const content = getProjectContent(slug);
 
 	return <>
-		<h1>slug: {slug}</h1>
-		<div className={styles.card}>
+		<div className="text-center grid place-items-center">
 			<p>Project: {content.title}</p>
-			<p>Description: {content.description}</p>
+			<p className="mb-7">Description: {content.description}</p>
 			<Image
 				src={content.image}
 				alt={content.imageAlt}

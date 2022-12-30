@@ -1,39 +1,39 @@
-// 'use client'; // must use client component if using hooks below
+import Image from "next/image";
 
-// import React, {useEffect, useState} from 'react';
-// import Image from 'next/image';
+const fetchProduct = async(slug) => {
+    const apiUrlEndpoint = `http://localhost:3000/api/getRespFromDb/`;
+    const postData = {
+        method: "Post",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+            id:slug,
+        }),
+    };
+    const response = await fetch(apiUrlEndpoint, postData);
+    const res = await response.json();
+    const prodArray = res.products.map(prod => prod);
+    const productId = prodArray.find(prod => prod.PRODUCT_ID == slug);
+    // console.log(productId, productId.PRODUCT_ID)
+    return productId;
+}
 
-// export default function Product(props) {
-//     const slug = props.params.id;
-    
-//     const [dataResponse, setDataResponse] = useState([])
+async function Product(props) {
+    const slug = props.params.id;
+    const product = await fetchProduct(slug)
 
-//     useEffect(() => {
-//         async function getProductData() {
-//             const apiUrlEndpoint = `http://localhost:3000/api/getProductsDBdata`;
-//             const response = await fetch(apiUrlEndpoint);
-//             const res = await response.json();
-//             console.log(res.products, 'response')
-//             setDataResponse(res.products)
-//         }
-//         getProductData();
-//     }, []);
-//     return <>
-//         <div>
-//             <ul className="grid grid-cols-3 gap4">
-//                 {dataResponse.map((product, p) => (
-//                     <li className="text-center" key={`product-${p}`}>
-//                         <Image 
-//                             width="300" 
-//                             height="300" 
-//                             src={`/images/${product.PRODUCT_IMG}`} 
-//                             alt={product.PRODUCT_NAME}
-//                         />
-//                         <p><b>{product.PRODUCT_NAME}</b></p>
-//                         <p><i>${product.PRODUCT_COST}.00</i></p>
-//                     </li>
-//                 ))}
-//             </ul> 
-//         </div>
-//     </>
-// }
+    return <>
+        <h1 className="text-center mb-7">Product {slug}</h1>
+        <div className="text-center grid place-items-center">
+            <Image 
+                width="300" 
+                height="300" 
+                src={`/images/${product.PRODUCT_IMG}`} 
+                alt={product.PRODUCT_NAME}
+            />
+             <p>{product.PRODUCT_NAME}</p>
+            <div><b>${product.PRODUCT_COST}.00</b></div>
+        </div>
+    </>
+}
+
+export default Product;

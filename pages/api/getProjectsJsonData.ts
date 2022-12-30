@@ -2,7 +2,7 @@ import fs from 'fs';
 import { ProjectJsonData } from '../../interfaces/ProjectJsonData';
 
 const getProjectsJsonData = (): ProjectJsonData[] => {
-	const jsonDataFile = fs.readFileSync("data/projects.json", "utf8");
+	const jsonDataFile = fs.readFileSync("staticData/projects.json", "utf8");
 	let data = JSON.parse(jsonDataFile).projects.map((project) => {
 		return {
 			slug: project.slug,

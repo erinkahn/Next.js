@@ -8,9 +8,11 @@ export default function BlogPage() {
     ))
 
     return <>        
-        <div>
-            <h1>Blog Page</h1>
-            {postPreviews}
+        <div className="text-center">
+            <h1 className="mb-7">Blog Page (static metadata)</h1>
+            <ul className="grid grid-cols-2 gap-4">
+                {postPreviews}
+            </ul>
         </div>
     </>
 }

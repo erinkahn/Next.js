@@ -3,11 +3,11 @@ import matter from 'gray-matter';
 import { PostMetadata } from "../../interfaces/PostMetadata";
 
 const getPostsMetadata = (): PostMetadata[] => {
-	const mdDataFiles = fs.readdirSync("data/posts/").filter((file) => file.endsWith(".md"));
+	const mdDataFiles = fs.readdirSync("staticData/posts/").filter((file) => file.endsWith(".md"));
 
 	// get gray-matter data from each post md file
     const posts = mdDataFiles.map((fileName) => {
-        const fileContents = fs.readFileSync(`data/posts/${fileName}`, "utf8");
+        const fileContents = fs.readFileSync(`staticData/posts/${fileName}`, "utf8");
         const matterResult = matter(fileContents);
         return {
             title: matterResult.data.title,

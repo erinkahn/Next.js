@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -6,8 +5,8 @@ export default function Home() {
 		<main className={styles.main}>
 			<div className={styles.description}>
 				<p>
-					New Website Coming in&nbsp;
-					<code className={styles.code}>2023</code>
+					(This is the Homepage...pretty right?)
+					<code className={styles.code}> 12/2022</code>
 				</p>
 			</div>
 		</main>
