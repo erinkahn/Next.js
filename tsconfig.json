@@ -29,7 +29,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "lib/db.js"  ],
+, "lib/db.js", "pages/api/getRespFromDb.js"  ],
   "exclude": [
     "node_modules"
   ]

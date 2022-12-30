@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { ProjectJsonData } from '../interfaces/ProjectJsonData';
+import { ProjectJsonData } from '../../interfaces/ProjectJsonData';
 
 const getProjectsJsonData = (): ProjectJsonData[] => {
 	const jsonDataFile = fs.readFileSync("data/projects.json", "utf8");

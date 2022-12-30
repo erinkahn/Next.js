@@ -1,5 +1,5 @@
 import PostPreview from "../../components/PostPreview";
-import getPostsMetadata from "../../pages/api/getPostMetadata";
+import getPostsMetadata from "../../pages/api/getPostsMetadata";
 
 export default function BlogPage() {
     const postMetadata = getPostsMetadata();

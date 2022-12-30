@@ -11,8 +11,8 @@ export default function RootLayout({ children }: {
   const header = (
     <header className="w-100">
       <div className="text-center">
-        <h1 className="text-2xl font-bold underline">Erin's Website</h1>
-        <p>Welcome to my portfolio.</p>
+        <h1 className="text-2xl font-bold underline">Erin's NextJS 13 App</h1>
+        <p>Welcome to my site of chaos where I train in nextjs and learn things hands on.</p>
         <br/>
         <Nav/>
       </div>
